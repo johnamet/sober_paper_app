@@ -1,0 +1,1 @@
+Model classes can be added here (e.g., Message, SoberDay). This skeleton uses simple Maps and Hive boxes.

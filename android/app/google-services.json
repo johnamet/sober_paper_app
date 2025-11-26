@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "670919623793",
+    "project_id": "puritypath001",
+    "storage_bucket": "puritypath001.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670919623793:android:f9fa8cf5ca62b7fda487d0",
+        "android_client_info": {
+          "package_name": "com.example.sober_paper"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnZT6oygNjrdSc_FkH8lOQ4p7mSfRXWU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670919623793:android:ae13ed2485bb2d9aa487d0",
+        "android_client_info": {
+          "package_name": "com.puritypath"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnZT6oygNjrdSc_FkH8lOQ4p7mSfRXWU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
