@@ -219,7 +219,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         _buildQuickActionButton(
           icon: Icons.message_outlined,
           label: 'Message Sponsor',
-          onTap: () => Navigator.pushNamed(context, '/chat'),
+          onTap: () => Navigator.pushNamed(context, '/community'),
+        ),
+        const SizedBox(height: AppSpacing.md),
+        _buildQuickActionButton(
+          icon: Icons.group_outlined,
+          label: 'Support Groups',
+          onTap: () => Navigator.pushNamed(context, '/community/groups'),
         ),
       ],
     );
