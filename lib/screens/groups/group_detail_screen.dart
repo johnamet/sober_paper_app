@@ -520,7 +520,7 @@ class _LeaveGroupButtonState extends ConsumerState<_LeaveGroupButton> {
           : const Icon(Icons.exit_to_app),
       label: Text(
         isCreator && widget.group.memberCount > 1
-            ? 'Transfer ownership first'
+            ? 'Cannot leave (you are the creator)'
             : 'Leave Group',
         style: AppTextStyles.bodyMedium.copyWith(color: AppColors.panicRed),
       ),
