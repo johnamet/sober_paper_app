@@ -6,6 +6,7 @@ import '../data/repositories/panic_repository.dart';
 import '../data/repositories/community_repository.dart';
 import '../data/repositories/reflection_repository.dart';
 import '../data/repositories/moderation_repository.dart';
+import '../data/repositories/notification_repository.dart';
 
 // ============================================================================
 // REPOSITORY PROVIDERS
@@ -44,4 +45,9 @@ final reflectionRepositoryProvider = Provider<ReflectionRepository>((ref) {
 /// Moderation Repository Provider
 final moderationRepositoryProvider = Provider<ModerationRepository>((ref) {
   return ModerationRepository();
+});
+
+/// Notification Repository Provider
+final notificationRepositoryProvider = Provider<NotificationRepository>((ref) {
+  return NotificationRepository();
 });

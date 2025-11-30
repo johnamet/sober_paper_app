@@ -15,18 +15,12 @@ class UserModel {
         displayName: json['displayName'] as String,
         email: json['email'] as String?,
         isAnonymous: json['isAnonymous'] as bool,
-        sobrietyStartDate: json['sobrietyStartDate'] != null
-            ? (json['sobrietyStartDate'] as Timestamp).toDate()
-            : null,
+        sobrietyStartDate: _parseDateTime(json['sobrietyStartDate']),
         sponsorId: json['sponsorId'] as String?,
         isVolunteer: json['isVolunteer'] as bool? ?? false,
         isAvailable: json['isAvailable'] as bool? ?? false,
-        lastActive: json['lastActive'] != null
-            ? (json['lastActive'] as Timestamp).toDate()
-            : null,
-        createdAt: json['createdAt'] != null
-            ? (json['createdAt'] as Timestamp).toDate()
-            : null,
+        lastActive: _parseDateTime(json['lastActive']),
+        createdAt: _parseDateTime(json['createdAt']),
         preferences: json['preferences'] != null
             ? _parsePreferences(json['preferences'])
             : const UserPreferences(),
@@ -97,5 +91,24 @@ class UserModel {
       totalReflections: json['totalReflections'] as int? ?? 0,
       totalPrayers: json['totalPrayers'] as int? ?? 0,
     );
+  }
+
+  /// Parse DateTime from Firestore - handles both Timestamp and String (ISO8601)
+  static DateTime? _parseDateTime(dynamic value) {
+    if (value == null) return null;
+    
+    if (value is Timestamp) {
+      return value.toDate();
+    }
+    
+    if (value is String) {
+      try {
+        return DateTime.parse(value);
+      } catch (e) {
+        return null;
+      }
+    }
+    
+    return null;
   }
 }

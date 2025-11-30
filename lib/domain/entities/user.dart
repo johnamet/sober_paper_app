@@ -56,7 +56,7 @@ class User {
       isVolunteer: isVolunteer ?? this.isVolunteer,
       isAvailable: isAvailable ?? this.isAvailable,
       lastActive: lastActive ?? this.lastActive,
-      createdAt: createdAt ?? this.createdAt,
+      createdAt: createdAt ?? createdAt,
       preferences: preferences ?? this.preferences,
       stats: stats ?? this.stats,
     );

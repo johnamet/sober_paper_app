@@ -3,17 +3,23 @@ import '../../domain/entities/sponsorship.dart';
 import '../../domain/entities/group.dart';
 import '../../domain/entities/message.dart';
 import '../../domain/entities/celebration.dart';
+import '../../domain/entities/notification.dart';
 import '../../models/sponsorship_model.dart';
 import '../../models/group_model.dart';
 import '../../models/message_model.dart';
 import '../../models/celebration_model.dart';
+import 'notification_repository.dart';
 
 /// Repository for community features (sponsorships, groups, messages, celebrations)
 class CommunityRepository {
   final FirebaseFirestore _firestore;
+  final NotificationRepository _notificationRepository;
 
-  CommunityRepository({FirebaseFirestore? firestore})
-      : _firestore = firestore ?? FirebaseFirestore.instance;
+  CommunityRepository({
+    FirebaseFirestore? firestore,
+    NotificationRepository? notificationRepository,
+  })  : _firestore = firestore ?? FirebaseFirestore.instance,
+        _notificationRepository = notificationRepository ?? NotificationRepository();
 
   // ===== SPONSORSHIP METHODS =====
 
@@ -35,6 +41,18 @@ class CommunityRepository {
           .collection('sponsorships')
           .add(SponsorshipModel(sponsorship).toJson());
 
+      // Send notification to the sponsor
+      await _notificationRepository.createNotification(
+        userId: sponsorId,
+        type: NotificationType.sponsorshipRequest,
+        title: 'New Sponsorship Request',
+        message: 'Someone wants you to be their sponsor!',
+        data: {
+          'sponsorshipId': docRef.id,
+          'sponsoredUserId': sponsoredUserId,
+        },
+      );
+
       return sponsorship.copyWith(id: docRef.id);
     } catch (e) {
       throw Exception('Failed to create sponsorship: $e');
@@ -46,11 +64,81 @@ class CommunityRepository {
     try {
       await _firestore.collection('sponsorships').doc(sponsorshipId).update({
         'status': SponsorshipStatus.active.name,
-        'startedAt': Timestamp.fromDate(DateTime.now()),
+        'acceptedAt': Timestamp.fromDate(DateTime.now()),
       });
     } catch (e) {
       throw Exception('Failed to accept sponsorship: $e');
     }
+  }
+
+  /// Reject/decline a sponsorship request
+  Future<void> rejectSponsorship(String sponsorshipId) async {
+    try {
+      await _firestore.collection('sponsorships').doc(sponsorshipId).update({
+        'status': SponsorshipStatus.ended.name,
+        'endedAt': Timestamp.fromDate(DateTime.now()),
+        'endReason': 'declined',
+      });
+    } catch (e) {
+      throw Exception('Failed to reject sponsorship: $e');
+    }
+  }
+
+  /// Get pending sponsorship requests for a sponsor
+  Stream<List<Sponsorship>> watchPendingSponsorshipRequests(String sponsorId) {
+    return _firestore
+        .collection('sponsorships')
+        .where('sponsorId', isEqualTo: sponsorId)
+        .where('status', isEqualTo: SponsorshipStatus.pending.name)
+        .orderBy('requestedAt', descending: true)
+        .snapshots()
+        .map((snapshot) {
+      return snapshot.docs.map((doc) {
+        final model = SponsorshipModel.fromJson({
+          ...doc.data(),
+          'id': doc.id,
+        });
+        return model.sponsorship;
+      }).toList();
+    });
+  }
+
+  /// Get active sponsorships where user is sponsor
+  Stream<List<Sponsorship>> watchActiveSponsorships(String sponsorId) {
+    return _firestore
+        .collection('sponsorships')
+        .where('sponsorId', isEqualTo: sponsorId)
+        .where('status', isEqualTo: SponsorshipStatus.active.name)
+        .orderBy('acceptedAt', descending: true)
+        .snapshots()
+        .map((snapshot) {
+      return snapshot.docs.map((doc) {
+        final model = SponsorshipModel.fromJson({
+          ...doc.data(),
+          'id': doc.id,
+        });
+        return model.sponsorship;
+      }).toList();
+    });
+  }
+
+  /// Get user's current sponsor (if they are a sponsee)
+  Stream<Sponsorship?> watchUserSponsor(String sponsoredUserId) {
+    return _firestore
+        .collection('sponsorships')
+        .where('sponsoredUserId', isEqualTo: sponsoredUserId)
+        .where('status', isEqualTo: SponsorshipStatus.active.name)
+        .limit(1)
+        .snapshots()
+        .map((snapshot) {
+      if (snapshot.docs.isEmpty) return null;
+      
+      final model = SponsorshipModel.fromJson({
+        ...snapshot.docs.first.data(),
+        'id': snapshot.docs.first.id,
+      });
+      return model.sponsorship;
+    });
   }
 
   /// End a sponsorship

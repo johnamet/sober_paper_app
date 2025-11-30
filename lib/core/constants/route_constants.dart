@@ -14,6 +14,9 @@ class Routes {
   static const String groupChat = '/community/groups/chat';
   static const String resources = '/resources';
   static const String reflectionDetail = '/resources/reflection';
+  static const String dailyReflection = '/daily-reflection';
+  static const String saintOfTheDay = '/saint-of-the-day';
+  static const String catholicReadings = '/catholic-readings';
   static const String prayerLibrary = '/resources/prayers';
   static const String profile = '/profile';
   static const String settings = '/profile/settings';

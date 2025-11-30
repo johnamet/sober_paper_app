@@ -23,6 +23,9 @@ export 'state_providers.dart';
 
 // Feature-Specific Providers
 export 'chat_providers.dart';
+export 'saint_of_the_day_providers.dart';
+export 'catholic_reflection_providers.dart' hide todayReflectionProvider;
+export 'catholic_reading_providers.dart';
 
 // Legacy Providers (to be refactored or removed)
 // export 'user_provider.dart';

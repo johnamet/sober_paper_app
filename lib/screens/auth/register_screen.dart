@@ -9,7 +9,7 @@ import '../../core/widgets/custom_button.dart';
 import '../../data/repositories/user_repository.dart';
 
 class RegisterScreen extends ConsumerStatefulWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
+  const RegisterScreen({super.key});
 
   @override
   ConsumerState<RegisterScreen> createState() => _RegisterScreenState();

@@ -68,6 +68,7 @@ class UserRepository {
     DateTime? sobrietyStartDate,
     String? sponsorId,
     bool? isVolunteer,
+    bool? isAvailable,
     UserPreferences? preferences,
   }) async {
     try {
@@ -77,10 +78,11 @@ class UserRepository {
 
       if (displayName != null) updates['displayName'] = displayName;
       if (sobrietyStartDate != null) {
-        updates['sobrietyStartDate'] = sobrietyStartDate.toIso8601String();
+        updates['sobrietyStartDate'] = Timestamp.fromDate(sobrietyStartDate);
       }
       if (sponsorId != null) updates['sponsorId'] = sponsorId;
       if (isVolunteer != null) updates['isVolunteer'] = isVolunteer;
+      if (isAvailable != null) updates['isAvailable'] = isAvailable;
       if (preferences != null) {
         updates['preferences'] = {
           'enablePanicAlerts': preferences.enablePanicAlerts,
@@ -174,5 +176,50 @@ class UserRepository {
     } catch (e) {
       throw Exception('Failed to delete user profile: $e');
     }
+  }
+
+  /// Get all users who are volunteering as sponsors
+  /// Filters: isVolunteer = true, isAvailable = true, daysClean >= 90
+  Future<List<User>> getAvailableSponsors() async {
+    try {
+      final snapshot = await _firestore
+          .collection(FirebaseCollections.users)
+          .where('isVolunteer', isEqualTo: true)
+          .where('isAvailable', isEqualTo: true)
+          .orderBy('sobrietyStartDate', descending: false)
+          .get();
+
+      // Convert to User entities
+      final users = snapshot.docs
+          .map((doc) => UserModel.fromJson(doc.data()).user)
+          .toList();
+
+      // Filter by days clean >= 90
+      final availableSponsors = users.where((user) {
+        return user.daysClean >= 90;
+      }).toList();
+
+      return availableSponsors;
+    } catch (e) {
+      throw Exception('Failed to get available sponsors: $e');
+    }
+  }
+
+  /// Stream available sponsors
+  Stream<List<User>> watchAvailableSponsors() {
+    return _firestore
+        .collection(FirebaseCollections.users)
+        .where('isVolunteer', isEqualTo: true)
+        .where('isAvailable', isEqualTo: true)
+        .orderBy('sobrietyStartDate', descending: false)
+        .snapshots()
+        .map((snapshot) {
+      final users = snapshot.docs
+          .map((doc) => UserModel.fromJson(doc.data()).user)
+          .toList();
+
+      // Filter by days clean >= 90
+      return users.where((user) => user.daysClean >= 90).toList();
+    });
   }
 }

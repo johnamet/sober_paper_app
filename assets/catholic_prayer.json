@@ -1,0 +1,452 @@
+[
+  {
+    "id": "p001",
+    "title": "Sign of the Cross",
+    "category": "liturgy",
+    "content": "In the name of the Father, and of the Son, and of the Holy Spirit. Amen.",
+    "latinVersion": "In nomine Patris et Filii et Spiritus Sancti. Amen.",
+    "notes": "Fundamental opening and closing prayer of Catholic devotion.",
+    "order": 1
+  },
+  {
+    "id": "p002",
+    "title": "Our Father (Lord's Prayer)",
+    "category": "rosary",
+    "content": "Our Father, who art in heaven, hallowed be thy name. Thy kingdom come, thy will be done, on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.",
+    "latinVersion": "Pater noster, qui es in cælis, sanctificetur nomen tuum. Adveniat regnum tuum. Fiat voluntas tua, sicut in cælo et in terra. Panem nostrum quotidianum da nobis hodie. Et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris. Et ne nos inducas in tentationem, sed libera nos a malo. Amen.",
+    "notes": null,
+    "order": 2
+  },
+  {
+    "id": "p003",
+    "title": "Hail Mary",
+    "category": "rosary",
+    "content": "Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",
+    "latinVersion": "Ave Maria, gratia plena, Dominus tecum. Benedicta tu in mulieribus, et benedictus fructus ventris tui, Iesus. Sancta Maria, Mater Dei, ora pro nobis peccatoribus, nunc et in hora mortis nostræ. Amen.",
+    "notes": null,
+    "order": 3
+  },
+  {
+    "id": "p004",
+    "title": "Glory Be",
+    "category": "rosary",
+    "content": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+    "latinVersion": "Gloria Patri et Filio et Spiritui Sancto. Sicut erat in principio, et nunc et semper, et in sæcula sæculorum. Amen.",
+    "notes": null,
+    "order": 4
+  },
+  {
+    "id": "p005",
+    "title": "Fatima Prayer (O My Jesus)",
+    "category": "rosary",
+    "content": "O my Jesus, forgive us our sins, save us from the fires of hell, lead all souls to Heaven, especially those in most need of Thy mercy. Amen.",
+    "latinVersion": null,
+    "notes": "Added to the Rosary after Our Lady's request at Fatima (1917).",
+    "order": 5
+  },
+  {
+    "id": "p006",
+    "title": "Apostles’ Creed",
+    "category": "liturgy",
+    "content": "I believe in God, the Father almighty, Creator of heaven and earth, and in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended into hell; on the third day he rose again from the dead; he ascended into heaven, and is seated at the right hand of God the Father almighty; from there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.",
+    "latinVersion": null,
+    "notes": "Used at the beginning of the Rosary and at Baptism.",
+    "order": 6
+  },
+  {
+    "id": "p007",
+    "title": "Morning Offering",
+    "category": "morning",
+    "content": "O Jesus, through the Immaculate Heart of Mary, I offer You my prayers, works, joys, and sufferings of this day for all the intentions of Your Sacred Heart, in union with the Holy Sacrifice of the Mass throughout the world, in reparation for my sins, for the intentions of all my relatives and friends, and in particular for the intentions of the Holy Father. Amen.",
+    "latinVersion": null,
+    "notes": "Traditional daily consecration prayer.",
+    "order": 1
+  },
+  {
+    "id": "p008",
+    "title": "Act of Faith",
+    "category": "morning",
+    "content": "O my God, I firmly believe that You are one God in three divine Persons: Father, Son, and Holy Spirit. I believe that Your divine Son became man and died for our sins, and that He will come to judge the living and the dead. I believe these and all the truths which the holy Catholic Church teaches, because You have revealed them, who can neither deceive nor be deceived. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 2
+  },
+  {
+    "id": "p009",
+    "title": "Act of Hope",
+    "category": "morning",
+    "content": "O my God, relying on Your almighty power and infinite mercy and promises, I hope to obtain pardon of my sins, the help of Your grace, and life everlasting, through the merits of Jesus Christ, my Lord and Redeemer. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 3
+  },
+  {
+    "id": "p010",
+    "title": "Act of Love (Act of Charity)",
+    "category": "morning",
+    "content": "O my God, I love You above all things, with my whole heart and soul, because You are all-good and worthy of all love. I love my neighbor as myself for the love of You. I forgive all who have injured me and ask pardon of all whom I have injured. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 4
+  },
+  {
+    "id": "p011",
+    "title": "Act of Contrition (Traditional)",
+    "category": "evening",
+    "content": "O my God, I am heartily sorry for having offended Thee, and I detest all my sins because of Thy just punishments, but most of all because they offend Thee, my God, who art all good and deserving of all my love. I firmly resolve, with the help of Thy grace, to sin no more and to avoid the near occasions of sin. Amen.",
+    "latinVersion": null,
+    "notes": "Most commonly used in Confession.",
+    "order": 1
+  },
+  {
+    "id": "p012",
+    "title": "Angel of God (Guardian Angel Prayer)",
+    "category": "morning",
+    "content": "Angel of God, my guardian dear, to whom God's love commits me here, ever this day be at my side, to light and guard, to rule and guide. Amen.",
+    "latinVersion": "Ángele Dei, qui custos es mei, me tibi commíssum pietáte supérna, illúmina, custódi, rege et gubérna. Amen.",
+    "notes": null,
+    "order": 5
+  },
+  {
+    "id": "p013",
+    "title": "Prayer to St. Michael the Archangel",
+    "category": "emergency",
+    "content": "Saint Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil. May God rebuke him, we humbly pray; and do Thou, O Prince of the Heavenly Host, by the power of God, cast into hell Satan and all the evil spirits who prowl about the world seeking the ruin of souls. Amen.",
+    "latinVersion": "Sancte Míchael Archángele, defénde nos in próelio...",
+    "notes": "Composed by Pope Leo XIII (1884).",
+    "order": 1
+  },
+  {
+    "id": "p014",
+    "title": "Memorare",
+    "category": "evening",
+    "content": "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession was left unaided. Inspired with this confidence, I fly unto thee, O Virgin of virgins, my Mother; to thee do I come, before thee I stand, sinful and sorrowful. O Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me. Amen.",
+    "latinVersion": "Memoráre, o piíssima Virgo María...",
+    "notes": "Attributed to St. Bernard of Clairvaux.",
+    "order": 2
+  },
+  {
+    "id": "p015",
+    "title": "Hail Holy Queen (Salve Regina)",
+    "category": "rosary",
+    "content": "Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope. To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us, and after this our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.",
+    "latinVersion": "Salve, Regína, Mater misericórdiæ...",
+    "notes": "Closing prayer of the Rosary.",
+    "order": 7
+  },
+  {
+    "id": "p016",
+    "title": "Anima Christi",
+    "category": "liturgy",
+    "content": "Soul of Christ, sanctify me. Body of Christ, save me. Blood of Christ, inebriate me. Water from the side of Christ, wash me. Passion of Christ, strengthen me. O good Jesus, hear me. Within Thy wounds hide me. Permit me not to be separated from Thee. From the wicked foe defend me. At the hour of my death call me, and bid me come to Thee, that with Thy saints I may praise Thee forever and ever. Amen.",
+    "latinVersion": "Ánima Christi, sanctífica me...",
+    "notes": "Popular after-Communion prayer.",
+    "order": 8
+  },
+  {
+    "id": "p017",
+    "title": "Come, Holy Spirit",
+    "category": "morning",
+    "content": "Come, Holy Spirit, fill the hearts of Thy faithful and enkindle in them the fire of Thy love. Send forth Thy Spirit and they shall be created, and Thou shalt renew the face of the earth. O God, who didst instruct the hearts of the faithful by the light of the Holy Spirit, grant us in the same Spirit to be truly wise and ever to rejoice in His consolation. Through Christ our Lord. Amen.",
+    "latinVersion": "Veni, Sancte Spíritus, reple tuórum corda fidélium...",
+    "notes": null,
+    "order": 6
+  },
+  {
+    "id": "p018",
+    "title": "Prayer Before a Crucifix",
+    "category": "evening",
+    "content": "Behold, O kind and most sweet Jesus, I cast myself upon my knees in Thy sight, and with the most fervent desire of my soul I pray and beseech Thee that Thou wouldst impress upon my heart lively sentiments of faith, hope, and charity, with true repentance for my sins and a firm desire of amendment, while with deep affection and grief of soul I ponder within myself and mentally contemplate Thy five most precious wounds, having before my eyes that which David spoke in prophecy of Thee, O good Jesus: 'They have pierced My hands and feet; they have numbered all My bones.'",
+    "latinVersion": null,
+    "notes": "Grants a plenary indulgence when prayed before a crucifix (on Fridays in Lent, under usual conditions).",
+    "order": 3
+  },
+  {
+    "id": "p019",
+    "title": "Magnificat",
+    "category": "evening",
+    "content": "My soul magnifies the Lord, and my spirit rejoices in God my Savior, for he has looked with favor on the lowliness of his servant. Surely, from now on all generations will call me blessed; for the Mighty One has done great things for me, and holy is his name...",
+    "latinVersion": "Magníficat ánima mea Dóminum...",
+    "notes": "Evening Prayer (Vespers) canticle of Mary.",
+    "order": 4
+  },
+  {
+    "id": "p020",
+    "title": "Grace Before Meals",
+    "category": "morning",
+    "content": "Bless us, O Lord, and these Thy gifts, which we are about to receive from Thy bounty, through Christ our Lord. Amen.",
+    "latinVersion": "Bénedic, Dómine, nos et hæc tua dona...",
+    "notes": null,
+    "order": 7
+  },
+  {
+    "id": "p021",
+    "title": "Grace After Meals",
+    "category": "evening",
+    "content": "We give Thee thanks, almighty God, for all Thy benefits, who livest and reignest world without end. Amen. May the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
+    "latinVersion": "Ágimus tibi grátias, omnípotens Deus...",
+    "notes": null,
+    "order": 5
+  },
+  {
+    "id": "p022",
+    "title": "Regina Caeli",
+    "category": "liturgy",
+    "content": "Queen of Heaven, rejoice, alleluia. For He whom you merited to bear, alleluia. Has risen, as He said, alleluia. Pray for us to God, alleluia. Rejoice and be glad, O Virgin Mary, alleluia. For the Lord has truly risen, alleluia.",
+    "latinVersion": "Regína cæli, lætáre, allelúia...",
+    "notes": "Easter-season Marian antiphon.",
+    "order": 9
+  },
+  {
+    "id": "p023",
+    "title": "Angelus",
+    "category": "morning",
+    "content": "The Angel of the Lord declared unto Mary...\nV. Behold the handmaid of the Lord.\nR. Be it done unto me according to thy word.\nHail Mary...\n\nAnd the Word was made flesh...\nV. Pray for us, O holy Mother of God.\nR. That we may be made worthy of the promises of Christ.\n\nLet us pray: Pour forth, we beseech Thee, O Lord, Thy grace into our hearts...",
+    "latinVersion": null,
+    "notes": "Traditionally prayed at 6am, noon, and 6pm.",
+    "order": 8
+  },
+  {
+    "id": "p024",
+    "title": "Sub Tuum Praesidium",
+    "category": "emergency",
+    "content": "We fly to thy protection, O holy Mother of God. Despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin. Amen.",
+    "latinVersion": "Sub tuum præsídium confúgimus, Sancta Dei Génetrix...",
+    "notes": "Oldest known Marian prayer (3rd century).",
+    "order": 2
+  },
+  {
+    "id": "p025",
+    "title": "Prayer for the Souls in Purgatory",
+    "category": "evening",
+    "content": "Eternal rest grant unto them, O Lord, and let perpetual light shine upon them. May they rest in peace. Amen.",
+    "latinVersion": "Réquiem ætérnam dona eis, Dómine, et lux perpétua lúceat eis...",
+    "notes": null,
+    "order": 6
+  },
+  {
+    "id": "p026",
+    "title": "Te Deum (Short Form)",
+    "category": "morning",
+    "content": "Holy God, we praise Thy name; Lord of all, we bow before Thee! All on earth Thy scepter claim, all in heaven above adore Thee. Infinite Thy vast domain, everlasting is Thy reign...",
+    "latinVersion": "Te Deum laudámus...",
+    "notes": "Ancient hymn of thanksgiving.",
+    "order": 9
+  },
+  {
+    "id": "p027",
+    "title": "Prayer to the Holy Family",
+    "category": "evening",
+    "content": "Jesus, Mary, and Joseph, I give you my heart and my soul. Jesus, Mary, and Joseph, assist me in my last agony. Jesus, Mary, and Joseph, may I breathe forth my soul in peace with you. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 7
+  },
+  {
+    "id": "p028",
+    "title": "Litany of the Blessed Virgin Mary (Short)",
+    "category": "rosary",
+    "content": "Lord have mercy... Christ have mercy...\nHoly Mary, pray for us.\nMother of Christ, pray for us.\nMother most pure, pray for us.\nQueen of the Rosary, pray for us...\nLamb of God, who takes away the sins of the world, have mercy on us.",
+    "latinVersion": null,
+    "notes": "Excerpt; full litany is much longer.",
+    "order": 10
+  },
+  {
+    "id": "p029",
+    "title": "Act of Spiritual Communion",
+    "category": "liturgy",
+    "content": "My Jesus, I believe that You are present in the Most Holy Sacrament. I love You above all things, and I desire to receive You into my soul. Since I cannot at this moment receive You sacramentally, come at least spiritually into my heart. I embrace You as if You were already there and unite myself wholly to You. Never permit me to be separated from You. Amen.",
+    "latinVersion": null,
+    "notes": "Composed by St. Alphonsus Liguori.",
+    "order": 11
+  },
+  {
+    "id": "p030",
+    "title": "Divine Praises",
+    "category": "liturgy",
+    "content": "Blessed be God. Blessed be His Holy Name. Blessed be Jesus Christ, true God and true Man. Blessed be the Name of Jesus. Blessed be His Most Sacred Heart. Blessed be His Most Precious Blood. Blessed be Jesus in the Most Holy Sacrament of the Altar...",
+    "latinVersion": null,
+    "notes": "Traditionally recited after Benediction.",
+    "order": 12
+  },
+  {
+    "id": "p031",
+    "title": "Prayer of St. Francis",
+    "category": "morning",
+    "content": "Lord, make me an instrument of Your peace. Where there is hatred, let me sow love; where there is injury, pardon; where there is doubt, faith; where there is despair, hope; where there is darkness, light; and where there is sadness, joy...",
+    "latinVersion": null,
+    "notes": "Popular 20th-century prayer.",
+    "order": 10
+  },
+  {
+    "id": "p032",
+    "title": "Prayer to One’s Patron Saint",
+    "category": "morning",
+    "content": "O heavenly patron, whose name I have the privilege to bear, pray ever for me before the throne of God; help me in my daily duties, obtain for me the grace to avoid sin, and guide me safely to heaven. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 11
+  },
+  {
+    "id": "p033",
+    "title": "Prayer for Vocations",
+    "category": "morning",
+    "content": "O Holy Spirit, Spirit of wisdom and divine love, impart Your knowledge, understanding, and counsel to youth that they may know the vocation wherein they can best serve God. Give them courage and strength to follow God’s holy will. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 12
+  },
+  {
+    "id": "p034",
+    "title": "Prayer Before Work",
+    "category": "morning",
+    "content": "Direct, O Lord, all my actions by Your holy inspirations and carry them on by Your gracious assistance, that every prayer and work of mine may begin always with You and through You be happily ended. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 13
+  },
+  {
+    "id": "p035",
+    "title": "Prayer for the Pope",
+    "category": "evening",
+    "content": "O God, the Shepherd and Ruler of all the faithful, look down with favor upon Your servant [Pope’s name], whom You have appointed pastor over Your Church; grant, we beseech You, that by word and example he may edify all those under his charge. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 8
+  },
+  {
+    "id": "p036",
+    "title": "Prayer for Peace",
+    "category": "emergency",
+    "content": "O God, from whom are all holy desires, right counsels, and just works, give to Your servants that peace which the world cannot give, that our hearts may be devoted to Your service, and that, being delivered from the fear of our enemies, we may pass our time in peace under Your protection. Through Christ our Lord. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 3
+  },
+  {
+    "id": "p037",
+    "title": "Prayer in Time of Illness",
+    "category": "emergency",
+    "content": "Lord Jesus Christ, who went about doing good and healing all, we ask You to bless Your sick children. Strengthen their faith and trust in You. Comfort them in their pain and give them courage. May they unite their sufferings with Yours for the salvation of the world. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 4
+  },
+  {
+    "id": "p038",
+    "title": "Prayer for the Dead (Short)",
+    "category": "evening",
+    "content": "May the souls of the faithful departed, through the mercy of God, rest in peace. Amen.",
+    "latinVersion": "Fidélium ánimæ per misericórdiam Dei requiéscant in pace. Amen.",
+    "notes": null,
+    "order": 9
+  },
+  {
+    "id": "p039",
+    "title": "Prayer for Travelers",
+    "category": "emergency",
+    "content": "O Almighty and merciful God, who has commissioned Your angels to guide and protect us, command them to be our companions from our setting out until our return; to clothe us with their invisible protection; to keep us from all danger of collision, of fire, of explosion, of falling, and to bring us safely home. Through Christ our Lord. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 5
+  },
+  {
+    "id": "p040",
+    "title": "Prayer for Priests",
+    "category": "morning",
+    "content": "O Jesus, eternal High Priest, keep Your priests within the shelter of Your Sacred Heart, where none may harm them. Keep unstained their anointed hands which daily touch Your Sacred Body. Keep unsullied their lips purpled with Your Precious Blood. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 14
+  },
+  {
+    "id": "p041",
+    "title": "Prayer to St. Joseph",
+    "category": "evening",
+    "content": "O blessed Joseph, faithful guardian of my Redeemer, Jesus Christ, protector of thy chaste spouse, the Virgin Mother of God, I choose thee this day to be my special patron and advocate. Obtain for me, O loving father, the grace to live entirely for Him who came to save the world. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 10
+  },
+  {
+    "id": "p042",
+    "title": "Prayer to the Infant Jesus",
+    "category": "morning",
+    "content": "O Holy Infant Jesus, through Your life of want and suffering, help me to bear my trials with patience and love. Have mercy on me and grant my petition [mention your request]. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 15
+  },
+  {
+    "id": "p043",
+    "title": "Prayer for Protection at Night",
+    "category": "evening",
+    "content": "Visit this house, we beg You, Lord, and drive far from it all the snares of the enemy. Let Your holy angels dwell here to keep us in peace, and may Your blessing be always upon us. Through Christ our Lord. Amen.",
+    "latinVersion": null,
+    "notes": "From the Roman Ritual.",
+    "order": 11
+  },
+  {
+    "id": "p044",
+    "title": "Prayer for Forgiveness",
+    "category": "evening",
+    "content": "Forgive me my sins, O Lord, forgive me my sins; the sins of my youth, the sins of my age, the sins of my soul, the sins of my body... I am truly sorry for every sin, mortal and venial, for all the sins of my past life. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 12
+  },
+  {
+    "id": "p045",
+    "title": "Prayer for Guidance",
+    "category": "morning",
+    "content": "Direct my steps, O Lord, according to Your word, and let no iniquity have dominion over me. Show me the path I should follow and give me the grace to walk in it faithfully. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 16
+  },
+  {
+    "id": "p046",
+    "title": "Prayer for Purity",
+    "category": "morning",
+    "content": "O Mary, my Mother, I consecrate to thee my heart and my body. Keep me pure in body and soul, that I may be a worthy temple of the Holy Spirit. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 17
+  },
+  {
+    "id": "p047",
+    "title": "Prayer for Humility",
+    "category": "evening",
+    "content": "O Jesus, meek and humble of heart, make my heart like unto Thine. Teach me to accept insults and humiliations as You did, and to seek only the glory of God and the salvation of souls. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 13
+  },
+  {
+    "id": "p048",
+    "title": "Prayer for the Church",
+    "category": "liturgy",
+    "content": "O Lord Jesus Christ, supreme Pastor of the Church, we pray that You will protect and guide Your Holy Church. Keep her safe from all evil and strengthen her in faith, hope, and love. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 13
+  },
+  {
+    "id": "p049",
+    "title": "Prayer for Final Perseverance",
+    "category": "evening",
+    "content": "O God, whose mercy is everlasting and whose power is infinite, grant me the grace of final perseverance, that I may die in Your friendship and love. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 14
+  },
+  {
+    "id": "p050",
+    "title": "Prayer of Thanksgiving",
+    "category": "evening",
+    "content": "Almighty God, Father of all mercies, we Your unworthy servants give You most humble and hearty thanks for all Your goodness and loving-kindness to us and to all people. We bless You for our creation, preservation, and all the blessings of this life. Amen.",
+    "latinVersion": null,
+    "notes": null,
+    "order": 15
+  }
+]

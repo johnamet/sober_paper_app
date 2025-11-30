@@ -7,7 +7,7 @@ import '../../core/widgets/paper_card.dart';
 import '../../core/widgets/custom_button.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();

@@ -7,7 +7,15 @@ import '../screens/home_screen.dart';
 import '../screens/calendar_screen.dart';
 import '../screens/contacts_screen.dart';
 import '../screens/reflections_screen.dart';
+import '../screens/daily_reflection_screen.dart';
+import '../screens/saint_of_the_day_screen.dart';
+import '../screens/catholic_readings_screen.dart';
 import '../screens/panic_modal.dart';
+import '../screens/find_sponsor_screen.dart';
+import '../screens/group_list_screen.dart';
+import '../screens/profile_screen.dart';
+import '../screens/settings_screen.dart';
+import '../screens/edit_profile_screen.dart';
 
 class AppRoutes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -40,6 +48,30 @@ class AppRoutes {
           ),
           fullscreenDialog: true,
         );
+      
+      case Routes.findSponsor:
+        return MaterialPageRoute(builder: (_) => FindSponsorScreen());
+      
+      case Routes.groupList:
+        return MaterialPageRoute(builder: (_) => GroupListScreen());
+      
+      case Routes.profile:
+        return MaterialPageRoute(builder: (_) => ProfileScreen());
+      
+      case Routes.settings:
+        return MaterialPageRoute(builder: (_) => SettingsScreen());
+      
+      case Routes.editProfile:
+        return MaterialPageRoute(builder: (_) => EditProfileScreen());
+      
+      case Routes.dailyReflection:
+        return MaterialPageRoute(builder: (_) => const DailyReflectionScreen());
+      
+      case Routes.saintOfTheDay:
+        return MaterialPageRoute(builder: (_) => const SaintOfTheDayScreen());
+      
+      case Routes.catholicReadings:
+        return MaterialPageRoute(builder: (_) => const CatholicReadingsScreen());
       
       default:
         // Default to splash screen for unknown routes

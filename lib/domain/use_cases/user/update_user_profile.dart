@@ -12,6 +12,7 @@ class UpdateUserProfile {
     DateTime? sobrietyStartDate,
     String? sponsorId,
     bool? isVolunteer,
+    bool? isAvailable,
     UserPreferences? preferences,
   }) async {
     if (uid.isEmpty) {
@@ -24,6 +25,7 @@ class UpdateUserProfile {
       sobrietyStartDate: sobrietyStartDate,
       sponsorId: sponsorId,
       isVolunteer: isVolunteer,
+      isAvailable: isAvailable,
       preferences: preferences,
     );
   }

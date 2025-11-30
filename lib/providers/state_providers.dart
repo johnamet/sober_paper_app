@@ -4,6 +4,8 @@ import '../domain/entities/user.dart';
 import '../domain/entities/sobriety_log.dart';
 import '../domain/entities/panic_request.dart';
 import '../domain/entities/daily_reflection.dart';
+import '../domain/entities/sponsorship.dart';
+import '../domain/entities/notification.dart';
 import 'repository_providers.dart';
 
 // ============================================================================
@@ -144,6 +146,86 @@ final activePanicRequestCountProvider = Provider<int>((ref) {
 final todayReflectionProvider = FutureProvider<DailyReflection?>((ref) async {
   final repository = ref.watch(reflectionRepositoryProvider);
   return await repository.getTodayReflection();
+});
+
+// ============================================================================
+// SPONSOR STATE PROVIDERS
+// ============================================================================
+
+/// Available Sponsors Stream Provider
+final availableSponsorsProvider = StreamProvider<List<User>>((ref) {
+  final repository = ref.watch(userRepositoryProvider);
+  return repository.watchAvailableSponsors();
+});
+
+/// Get Available Sponsors (Future) Provider
+final getAvailableSponsorsProvider = FutureProvider<List<User>>((ref) async {
+  final repository = ref.watch(userRepositoryProvider);
+  return await repository.getAvailableSponsors();
+});
+
+/// Pending Sponsorship Requests Provider (for sponsors)
+final pendingSponsorshipRequestsProvider = StreamProvider<List<Sponsorship>>((ref) {
+  final userId = ref.watch(currentUserIdProvider);
+  
+  if (userId == null) {
+    return Stream.value([]);
+  }
+
+  final repository = ref.watch(communityRepositoryProvider);
+  return repository.watchPendingSponsorshipRequests(userId);
+});
+
+/// Active Sponsorships Provider (people you're sponsoring)
+final activeSponsorshipsProvider = StreamProvider<List<Sponsorship>>((ref) {
+  final userId = ref.watch(currentUserIdProvider);
+  
+  if (userId == null) {
+    return Stream.value([]);
+  }
+
+  final repository = ref.watch(communityRepositoryProvider);
+  return repository.watchActiveSponsorships(userId);
+});
+
+/// Current User's Sponsor Provider (your sponsor if you have one)
+final currentUserSponsorProvider = StreamProvider<Sponsorship?>((ref) {
+  final userId = ref.watch(currentUserIdProvider);
+  
+  if (userId == null) {
+    return Stream.value(null);
+  }
+
+  final repository = ref.watch(communityRepositoryProvider);
+  return repository.watchUserSponsor(userId);
+});
+
+// ============================================================================
+// NOTIFICATION STATE PROVIDERS
+// ============================================================================
+
+/// User Notifications Stream Provider
+final userNotificationsProvider = StreamProvider<List<AppNotification>>((ref) {
+  final userId = ref.watch(currentUserIdProvider);
+  
+  if (userId == null) {
+    return Stream.value([]);
+  }
+
+  final repository = ref.watch(notificationRepositoryProvider);
+  return repository.watchUserNotifications(userId);
+});
+
+/// Unread Notification Count Provider
+final unreadNotificationCountProvider = StreamProvider<int>((ref) {
+  final userId = ref.watch(currentUserIdProvider);
+  
+  if (userId == null) {
+    return Stream.value(0);
+  }
+
+  final repository = ref.watch(notificationRepositoryProvider);
+  return repository.watchUnreadCount(userId);
 });
 
 // ============================================================================
