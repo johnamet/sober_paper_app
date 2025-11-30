@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../domain/entities/message.dart';
+import '../domain/entities/group.dart';
 import 'repository_providers.dart';
 import 'state_providers.dart';
 
@@ -73,6 +74,34 @@ class DirectMessageParams {
   @override
   int get hashCode => userId1.hashCode ^ userId2.hashCode ^ limit.hashCode;
 }
+
+// ============================================================================
+// SUPPORT GROUPS PROVIDERS
+// ============================================================================
+
+/// Provider for the current user's groups
+final userGroupsProvider = FutureProvider<List<Group>>((ref) async {
+  final currentUserId = ref.watch(currentUserIdProvider);
+  
+  if (currentUserId == null) {
+    return [];
+  }
+
+  final repository = ref.watch(communityRepositoryProvider);
+  return repository.getUserGroups(currentUserId);
+});
+
+/// Provider for browsing public groups
+final publicGroupsProvider = FutureProvider<List<Group>>((ref) async {
+  final repository = ref.watch(communityRepositoryProvider);
+  return repository.browsePublicGroups(limit: 50);
+});
+
+/// Provider for getting a specific group by ID
+final groupDetailProvider = FutureProvider.family<Group?, String>((ref, groupId) async {
+  final repository = ref.watch(communityRepositoryProvider);
+  return repository.getGroup(groupId);
+});
 
 /// Provider for sending messages (use case will be added if needed)
 /// For now, we can use the repository directly via read()
