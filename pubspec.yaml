@@ -32,6 +32,11 @@ dependencies:
   url_launcher: ^6.2.0
   shared_preferences: ^2.2.0
   table_calendar: ^3.0.9
+  http: ^1.1.0
+  html: ^0.15.4
+  share_plus: ^7.2.1
+  path_provider: ^2.1.1
+
   
   # Local Storage
   hive: ^2.2.3
@@ -49,3 +54,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/images/
